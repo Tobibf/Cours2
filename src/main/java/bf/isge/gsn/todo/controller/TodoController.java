@@ -1,5 +1,8 @@
 package bf.isge.gsn.todo.controller;
 
+import bf.isge.gsn.todo.dto.CreateTodoDTO;
+import bf.isge.gsn.todo.dto.UpdateTodoDTO;
+import bf.isge.gsn.todo.exception.TodoNotExistException;
 import bf.isge.gsn.todo.model.Todo;
 import bf.isge.gsn.todo.service.TodoService;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +19,7 @@ public class TodoController {
     }
 
     @PostMapping
-    public Todo createTodo(@RequestBody Todo todo){
+    public Todo createTodo(@RequestBody CreateTodoDTO todo){
         return todoService.createTodo(todo);
     }
 
@@ -29,7 +32,7 @@ public class TodoController {
         return todoService.getById(id);
     }
     @PutMapping("{id}")
-    public void updateTodo(@PathVariable int id, @RequestBody Todo todo){
+    public void updateTodo(@PathVariable int id, @RequestBody UpdateTodoDTO todo) throws TodoNotExistException {
         todoService.updateTodo(id, todo);
 
     }
