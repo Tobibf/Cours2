@@ -21,3 +21,6 @@ spring:
     password: password
 logging.level.org.hibernate.SQL: DEBUG
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+welcome:
+  message: "ISGE students"

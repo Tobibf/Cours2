@@ -1,0 +1,11 @@
+.link {
+    color: green;
+    font-weight: bold;
+}
+h1 {
+    color: red;
+}
+.text-red {
+    color: white;
+    background-color: red;
+}
