@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Bienvenue</h1>
+<h2 th:text="${message}">..!..</h2>
+<a th:href="@{/addTodo}" class="link">Créer un todo</a>
+<a th:href="@{/todoList}" class="link">Liste des todo</a>
+</body>
+</html>
